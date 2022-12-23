@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card_2</title>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: pog;
+        font-weight: 100;
+    }
+
+    @font-face {
+        font-family: pog;
+        src: url(./Font/Rubik-Regular.ttf);
+    }
+
+    body
+    {
+        height: 100vh;
+        background-color: aliceblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .center
+    {
+        position: relative;
+        width: 30rem;
+        height: 25rem;
+        background-color: rgba(251, 160, 69, 0.401);
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    span
+    {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        width: 10rem;
+        height: 10rem;
+        background-color: black;
+        border-radius: 50%;
+        transform-origin: 5rem 0;
+        transform: rotate(calc(90deg * var(--i)));
+    }
+    span:nth-child(1)
+    {
+        background-color: red;
+        box-shadow: 0 0 90px red;
+        filter: blur(7rem);
+    }
+    span:nth-child(2)
+    {
+        background-color: rgb(217, 255, 0);
+        box-shadow: 0 0 90px rgb(217, 255, 0);
+        filter: blur(7rem);
+    }
+    span:nth-child(3)
+    {
+        background-color: rgb(0, 255, 26);
+        box-shadow: 0 0 90px rgb(0, 255, 26);
+        filter: blur(7rem);
+    }
+    span:nth-child(4)
+    {
+        background-color: rgb(255, 0, 200);
+        box-shadow: 0 0 90px rgb(255, 0, 200);
+        filter: blur(7rem);
+    }
+
+    h1
+    {
+        color: rgba(246, 212, 178, 0.499);
+        margin-bottom:14%;
+        z-index: 1;
+        letter-spacing: .1rem;
+    }
+
+    input
+    {
+        margin-bottom: 1rem;
+        width: 15rem;
+        height: 1.5rem;
+        border: none;
+        text-align: center;
+        border-radius: .3rem;
+        z-index: 1;
+        opacity: .5;
+        outline: none;
+    }
+
+    #btn1
+    {
+        width: 5rem;
+        height: 2.5rem;
+        cursor: pointer;
+    }
+
+    #btn1:hover
+    {
+        background-color: rgba(235, 190, 145, 0.401);
+        color: white;
+    }
+
+</style>
+</head>
+<body>
+    <div class="center">
+        <span style="--i:0;"></span>
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <h1>Login Now</h1>
+        <input type="text" name="username" placeholder="Username"/><br/>
+        <input type="password" name="password" placeholder="Password"/><br/>
+        <input type="submit" name="submit" value="Login" id="btn1"/>
+    </div>
+</body>
+</html>
